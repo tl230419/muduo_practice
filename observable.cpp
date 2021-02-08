@@ -10,7 +10,7 @@ Observable::~Observable()
 
 }
 
-void Observable::register(Observer* s)
+void Observable::register_(Observer* s)
 {
     
 }

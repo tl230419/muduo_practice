@@ -2,7 +2,7 @@
 #define OBSERVABLE_H
 
 #include "observer.h"
-#include <iostream>
+#include <vector>
 
 class Observable // boost::noncopyable
 {
@@ -10,7 +10,7 @@ public:
     Observable();
     ~Observable();
 
-    void register(Observer* s);
+    void register_(Observer* s);
     void unregister(Observer* s);
 
     void notifyObservers()

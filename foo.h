@@ -1,6 +1,9 @@
 #ifndef FOO_H
 #define FOO_H
 
+#include "observable.h"
+#include "observer.h"
+
 // class Foo : public Observer
 // {
 // public:
@@ -12,7 +15,7 @@
 //     virtual void update();
 // }
 
-class Foo
+class Foo : public Observer
 {
 public:
     Foo();
@@ -20,7 +23,7 @@ public:
 
     virtual void update();
 
-    void observe(Observer* s)
+    void observe(Observable* s)
     {
         s->register_(this);
     }
