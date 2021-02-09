@@ -3,6 +3,7 @@
 
 #include "observable.h"
 #include "observer.h"
+#include "mutexlock.h"
 
 // class Foo : public Observer
 // {
@@ -27,6 +28,9 @@ public:
     {
         s->register_(this);
     }
+
+private:
+    MutexLock mutex_;
 };
 
 #endif
