@@ -1,3 +1,5 @@
+#include <pthread.h>
+
 namespace CurrentThread
 {
 	extern __thread int t_cachedTid;
