@@ -1,5 +1,5 @@
-#include "../Mutex.h"
-#include "../Thread.h"
+#include "../../Mutex.h"
+#include "../../Thread.h"
 #include <vector>
 #include <stdio.h>
 
