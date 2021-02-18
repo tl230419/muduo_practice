@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Test.dir/Observer_safe.cc.o  -o Test 
