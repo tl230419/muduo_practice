@@ -34,24 +34,31 @@ void post1(const Foo& f)
 
 void traverse()
 {
+    printf("Start traverse\n");
     MutexLockGuard lock(mutex);
     for (std::vector<Foo>::const_iterator it = foos.begin();
         it != foos.end(); ++it)
     {
         it->doit();
     }
+    printf("End traverse\n");
 }
 
 void Foo::doit() const
 {
     Foo f;
-    post(f);
+    //post(f);
+    post1(f);
 }
 
 int main()
 {
     Foo f;
-    post(f);
+    // post(f);
+    // printf("End post\n");
+    post1(f);
+    printf("End post1\n");
     traverse();
+    printf("End all\n");
     return 0;
 }
