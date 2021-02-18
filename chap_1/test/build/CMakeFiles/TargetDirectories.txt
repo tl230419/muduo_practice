@@ -1,3 +1,0 @@
-/home/allen/work/src/muduo_practice/chap_1/test/build/CMakeFiles/rebuild_cache.dir
-/home/allen/work/src/muduo_practice/chap_1/test/build/CMakeFiles/Test.dir
-/home/allen/work/src/muduo_practice/chap_1/test/build/CMakeFiles/edit_cache.dir
