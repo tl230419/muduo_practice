@@ -4,3 +4,4 @@ project(chap_6)
 
 add_subdirectory(echo)
 add_subdirectory(finger)
+add_subdirectory(sudoku)
