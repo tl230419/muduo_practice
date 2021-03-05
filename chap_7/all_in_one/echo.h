@@ -1,19 +1,18 @@
-#ifndef TIME_H
-#define TIME_H
+#ifndef ECHO_H
+#define ECHO_H
 
 #include <muduo/net/TcpServer.h>
 
-class TimeServer
+class EchoServer
 {
 public:
-    TimeServer(muduo::net::EventLoop* loop,
-                  const muduo::net::InetAddress& listen_addr);
-    
+    EchoServer(muduo::net::EventLoop* loop,
+               const muduo::net::InetAddress& listen_addr);
+
     void start();
 
 private:
     void on_connection(const muduo::net::TcpConnectionPtr& conn);
-
     void on_message(const muduo::net::TcpConnectionPtr& conn,
                     muduo::net::Buffer* buf,
                     muduo::Timestamp time);
@@ -21,4 +20,4 @@ private:
     muduo::net::TcpServer server_;
 };
 
-#endif // TIME_H
+#endif // ECHO_H

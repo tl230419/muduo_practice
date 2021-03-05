@@ -1,4 +1,4 @@
-#include "time.h"
+#include "time_server.h"
 
 #include <muduo/base/Logging.h>
 #include <muduo/net/Endian.h>
@@ -30,7 +30,7 @@ void TimeServer::on_connection(const muduo::net::TcpConnectionPtr& conn)
             << (conn->connected() ? "UP" : "DOWN");
     if (conn->connected())
     {
-        time_t now = time(NULL);
+        time_t now = ::time(NULL);
         int32_t be32 = sockets::hostToNetwork32(static_cast<int32_t>(now));
         conn->send(&be32, sizeof be32);
         conn->shutdown();
